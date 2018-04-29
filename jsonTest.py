@@ -8,6 +8,7 @@ if __name__ == '__main__':
     pass
 
 import json
+import boto3
 
 with open('data2.json') as f:
     read_data=f.read()
@@ -42,3 +43,9 @@ try:
  
 except (ValueError, KeyError, TypeError):
     print "JSON format error"
+
+# Test boto3 connection to AWS s3
+s3 = boto3.resource('s3')
+
+for bucket in s3.buckets.all():
+    print(bucket.name)
