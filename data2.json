@@ -1,0 +1,212 @@
+{
+    "SecurityGroups": [
+        {
+            "Description": "launch-wizard-1 created 2018-03-05T10:42:02.135-08:00",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 22,
+                    "FromPort": 22,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ]
+                }
+            ],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-7c0a5303",
+            "GroupName": "launch-wizard-1"
+        },
+        {
+            "Description": "Connection from home to BackupInstance",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 22,
+                    "FromPort": 22,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "136.26.32.65/32"
+                        }
+                    ]
+                }
+            ],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-808d77fc",
+            "GroupName": "BackupInstance"
+        },
+        {
+            "Description": "Used while travelling",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-808e18fc",
+            "GroupName": "Travel"
+        },
+        {
+            "Description": "default VPC security group",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [
+                {
+                    "UserIdGroupPairs": [
+                        {
+                            "GroupId": "sg-9e946ee2",
+                            "UserId": "268154286469"
+                        }
+                    ],
+                    "IpProtocol": "-1",
+                    "IpRanges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-9e946ee2",
+            "GroupName": "default"
+        },
+        {
+            "Description": "Used for Chef testing",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 80,
+                    "FromPort": 80,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "136.26.32.65/32"
+                        }
+                    ]
+                },
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 22,
+                    "FromPort": 22,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "136.26.32.65/32"
+                        }
+                    ]
+                },
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 443,
+                    "FromPort": 443,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "136.26.32.65/32"
+                        }
+                    ]
+                }
+            ],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-c2e11bbe",
+            "GroupName": "ChefClass"
+        },
+        {
+            "Description": "Allow all IPs",
+            "IpPermissionsEgress": [
+                {
+                    "UserIdGroupPairs": [],
+                    "IpProtocol": "-1",
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "PrefixListIds": []
+                }
+            ],
+            "OwnerId": "268154286469",
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [],
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": [],
+                    "ToPort": 22,
+                    "FromPort": 22,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ]
+                }
+            ],
+            "VpcId": "vpc-7c33241a",
+            "GroupId": "sg-f4912788",
+            "GroupName": "AllIP"
+        }
+    ]
+}
