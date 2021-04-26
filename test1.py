@@ -3,6 +3,7 @@ Created on Apr 26, 2018
 
 @author: joclark
 '''
+# Edit from jfclarkjruser
 import math
 import random
 
